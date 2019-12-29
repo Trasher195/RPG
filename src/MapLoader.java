@@ -1,3 +1,5 @@
+import javax.imageio.ImageIO;
+import java.awt.*;
 import java.io.*;
 import java.util.Scanner;
 
@@ -51,4 +53,10 @@ public class MapLoader {
 
         return READ;
     }
+
+    public static Image LoadIm(String PATH) throws IOException {
+        Image im = ImageIO.read(new File(PATH));
+        return im;
+    }
+
 }
