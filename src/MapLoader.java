@@ -20,17 +20,17 @@ public class MapLoader {
         br.close();
     }
 
-    public  static int[][] LoadMap()  {
+    public  static int[][] LoadMap(String PATH) throws IOException {
 
         FileReader fr;
-        int[][] READ = new int[8][8];
+        int[][] READ = new int[9][9];
 
         try {
-            fr = new FileReader("/home/artem/IdeaProjects/2DCoRE v.0.0.1/bin/map/world.map");
+            fr = new FileReader(PATH);
             Scanner scan = new Scanner(fr);
             if(scan.hasNextInt()) {
-                for (int i = 0; i < 8; i++) {
-                    for (int k = 0; k < 8; k++) {
+                for (int i = 0; i < READ.length; i++) {
+                    for (int k = 0; k < READ.length; k++) {
                         READ[i][k] = scan.nextInt();
 
                     }

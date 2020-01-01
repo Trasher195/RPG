@@ -24,7 +24,7 @@ public class GamePanel extends JPanel {
         // отрисовка игрового поля
         for(int i = 0; i<9; i++) {
             for (int j = 0; j < 9; j++) {
-                if (CoreLogic.world[i][j] == 0) {
+                if (Game.l.world[i][j] == 0) {
                     gr.drawImage(grass, 10+j*70, 10+i*70, 70, 70, null);
                 }
             }
